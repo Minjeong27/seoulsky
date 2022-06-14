@@ -1,0 +1,163 @@
+@import url(common.css);
+
+header{
+  width:100%;
+  height:100px;
+  position:relative;
+  background-color: #fff;
+  position:fixed;
+  z-index:9999;
+  border-bottom:1px solid rgb(214, 214, 214);
+}
+
+.header_in{
+  width:1300px;
+  
+}
+
+.logo{
+  position:absolute;
+  top:15px;
+  left:35px;
+}
+
+.header-navi{
+  position:absolute;
+  left:650px;
+  z-index:100;
+}
+
+.header-navi>ul{
+  font-size:21px;
+  font-weight:bold;
+/*   font-family:'Do Hyeon', sans-serif; */
+  color:#333;
+  text-align:center;
+  
+}
+
+.header-navi>ul>li{
+  float:left;
+  width:150px;
+  height:100px;
+  line-height:100px;
+}
+
+.header-navi>ul>li:hover>a{
+  color:rgb(71, 125, 212);
+  cursor:pointer;
+
+}
+
+.header-navi>ul>li>ul{
+  font-size:14px;
+  text-align:center;
+  font-weight:lighter;
+  font-weight:bold;
+  color:#333;
+  display:none;
+  border-left:1px solid rgb(211, 226, 253);
+  height:155px;
+  padding-top:15px;
+}
+
+.header-navi>ul>li> .last{
+  border-right:1px solid rgb(211, 226, 253);
+
+}
+
+.header-navi>ul>li>ul>li{
+  line-height:30px;
+  padding:2px;
+  transition:all 0.2s;
+}
+
+.header-navi>ul>li>ul>li:hover{
+  background:rgba(211, 226, 253,0.8);
+  cursor:pointer;
+}
+
+.bg_box{
+  width:100%;
+  height:170px;
+  background:rgba(255, 255, 255, 0.9);
+  position:absolute;
+  top:100%;
+  display:none;
+}
+
+
+/*주메뉴별 바뀌는 서브페이지의 탑배경이미지*/
+.subtop1{
+	background:url(../image/visual1.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+  /* background-size:cover;
+	-webkit-background-size:cover;
+	-moz-background-size:cover; */
+  /* border:1px solid red; */
+}
+
+.subtop2{
+  background:url(../image/visual1.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop3{
+  background:url(../image/visual1.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop4{
+  background:url(../image/visual2.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop5{
+  background:url(../image/visual2.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop6{
+  background:url(../image/visual3.png) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop7{
+  background:url(../image/visual3.png) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop8{
+  background:url(../image/visual4.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+}
+
+.subtop9{
+	background:url(../image/visual4.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+
+}
+
+.subtop10{
+	background:url(../image/visual4.jpg) no-repeat top fixed;
+	width:100%;
+	height:400px;
+
+}
+
+
+section{
+  width:100%;
+  height:3000px;
+}
+
+

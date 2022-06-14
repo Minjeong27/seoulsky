@@ -1,0 +1,505 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+
+section{
+  background:#fff;
+  height:1100px;
+}
+
+.section3{
+  height:1850px;
+}
+
+.section6{
+  height:1300px;
+}
+
+.section7{
+  height:1400px;
+}
+
+.section_in{
+  width:1200px;
+  background:#fff;
+  margin:0 auto;
+  padding-bottom:30px;
+  /* background: yellow; */
+}
+
+.section_in h2{ /* 서브페이지 제목 공통 */
+  color:#555;
+  font-size:30px;
+  text-align:center;
+  padding:40px 0 20px 0;
+  border-bottom:1px solid rgb(227, 193, 42);
+  width:240px;
+  margin:0 auto;
+}
+
+.contents{
+  padding-top:50px;
+}
+
+
+
+/* MAP SUBPAGE//////////////////////// */
+.map{
+  text-align:center;
+  margin-bottom:80px;
+}
+
+
+.public{
+  font-weight:bold;
+  font-size:27px;
+  margin:60px 0 20px 0;
+}
+
+.subway2{
+  border:3px solid green;
+  border-radius:7px;
+  color:green;
+  font-size:17px;
+  font-weight:bold;
+  padding:2px 5px;
+  margin-right:10px;
+}
+
+.subway8{
+  border:3px solid rgb(251, 45, 127);
+  border-radius:7px;
+  color:rgb(251, 45, 127);
+  font-size:17px;
+  font-weight:bold;
+  padding:2px 5px;
+  margin-right:10px;
+}
+
+.subway_in{
+  font-size:16px;
+  color:#222;
+  font-weight:bold;
+}
+
+.bus1{
+  border:3px solid skyblue;
+  border-radius:7px;
+  color:skyblue;
+  font-size:17px;
+  font-weight:bold;
+  padding:2px 5px;
+  margin-right:10px;
+}
+
+.bus2{
+  border:3px solid orange;
+  border-radius:7px;
+  color:orange;
+  font-size:17px;
+  font-weight:bold;
+  padding:2px 5px;
+  margin-right:10px;
+}
+
+.bus3{
+  border:3px solid purple;
+  border-radius:7px;
+  color:purple;
+  font-size:17px;
+  font-weight:bold;
+  padding:2px 5px;
+  margin-right:10px;
+}
+
+.bus1_in, .bus2_in, .bus3_in{
+  font-size:16px;
+  color:#222;
+  font-weight:bold;
+}
+
+.parkingtext1{
+  font-size:15px;
+  color:#222;
+  font-weight:bold;
+  text-indent:3px;
+  margin-bottom:10px;
+}
+
+.parkingtext2{
+  font-size:13px;
+  color:#222;
+  margin-left:10px;
+  line-height:17px;
+}
+
+.youtube{
+  margin-top:80px;
+  text-align:center;
+
+}
+
+/* 이용안내 SUBPAGE//////////////////////// */
+
+.guide h3{
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.guide h4{
+  font-size:17px;
+  font-weight:bold;
+  margin:30px 0 10px 0;
+  color:rgb(0, 79, 189)
+}
+
+.guide table{
+  text-align:center;
+}
+
+.contents{
+
+}
+
+.ticket{
+  margin-bottom:70px;
+  line-height:24px;
+  font-size:13px;
+}
+
+.time_down{
+  margin:20px 0 30px 0;
+  line-height:24px;
+  font-size:13px;
+}
+
+.ticket_down{
+  margin-top:20px;
+  line-height:24px;
+  font-size:13px;
+}
+
+.table1{
+  border:1px solid rgb(234, 234, 234);
+  border-top:2px solid rgb(113, 113, 113);
+}
+
+.table2{
+  border:1px solid rgb(234, 234, 234);
+  border-top:2px solid rgb(113, 113, 113);
+}
+
+
+
+
+
+
+/* SPECIAL SUBPAGE//////////////////////// */
+.special{
+  
+}
+
+.special ul{
+  padding-left:30px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:wrap;
+
+}
+
+.special ul li{
+  position:relative;
+  margin:10px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-flow:wrap;
+  width:260px;
+}
+
+.special ul img{
+
+}
+
+.special ul li span{
+  background:rgba(0,0,0,0.8);
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:0px;
+  opacity:0;
+  color:#fff;
+  margin-top:10px;
+  font-size:18px;
+  transition:all 0.3s;
+
+}
+
+.special ul li:hover span{
+  height:185px;
+  opacity:1;
+}
+
+.special ul li a{
+
+}
+
+.special ul li .text{
+  position:absolute;
+  top:105px;
+  left:10%;
+  color:#fff;
+  font-weight:bold;
+  font-size:18px; 
+  z-index:10;
+  text-align:center;
+  
+}
+
+.special ul li .htext{
+  position:absolute;
+  top:160px;
+  left:20%;
+  color:#fff;
+  z-index:10;
+  font-weight:bold;
+  opacity:0;
+  transition:all 0.3s;
+}
+
+.special ul li .view{
+  position:absolute;
+  top:200px;
+  left:35%;
+  color:#fff;
+  z-index:10;
+  font-weight:bold;
+  border:1px solid #fff;
+  padding:8px 25px;
+  opacity:0;
+  transition:all 0.3s;
+}
+
+.special ul li:hover .htext{
+  opacity:1;
+}
+
+.special ul li:hover .view{
+  opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FAQ SUBPAGE//////////////////////// */
+
+.list ul{
+
+}
+
+.list ul li{
+  border-bottom:1px solid #333;
+  line-height:70px;
+  font-size:15px;
+  font-weight:bold;
+  position:relative;
+  
+}
+
+.list ul li:hover{
+  cursor:pointer;
+}
+
+.list ul li p{
+  display:inline;
+  color:#444;
+}
+
+.list ul li:hover p{
+  border-bottom:1px solid #333;
+}
+
+.list ul li span{
+  margin:0 40px;
+  font-size:30px;
+  color:#444;
+}
+
+.list ul li .material-icons{
+  position:absolute;
+  top:23px;
+  right:40px;
+}
+
+
+
+
+/*  이용문의 SUBPAGE//////////////////////// */
+
+fieldset{
+  border:1px solid #999;
+  height:850px;
+
+}
+
+fieldset legend{
+  font-size:16px;
+  font-weight:bold;
+  background:rgb(255, 230, 211);
+  margin-left:10px;
+  padding:5px;
+  border-radius:5px;
+  color:#333;
+}
+
+fieldset ul{
+  margin-left:30px;
+
+}
+
+fieldset ul li{
+  padding:20px;
+  border-bottom:1px solid rgb(209, 209, 209);
+  position:relative;
+}
+
+fieldset ul li:last-child{
+  border-bottom:none;
+
+}
+
+fieldset input{
+  height:25px;
+}
+
+fieldset label{
+  font-size:16px;
+  font-weight:bold;
+  margin-left:40px;
+  color:#111;
+}
+
+input{
+  position:absolute;
+  top:15px;
+  text-indent:10px;
+}
+
+.inputs{
+  position:absolute;
+  left:300px;
+  height:30px;
+  width:300px;
+  border:1px solid rgb(181, 181, 181)
+} 
+
+.input0{
+  position:absolute;
+  left:300px;
+  width:300px;
+  top:15px;
+  height:30px;
+  text-indent:10px;
+  border:1px solid rgb(181, 181, 181)
+} 
+
+.input1{
+  position:absolute;
+  left:300px;
+  width:100px;
+  text-indent:30px;
+  height:30px;
+  border:1px solid rgb(181, 181, 181);
+}
+
+.input2{
+  position:absolute;
+  left:420px;
+  width:100px;
+  text-align:center;
+  height:30px;
+  border:1px solid rgb(181, 181, 181)
+}
+
+.input3{
+  position:absolute;
+  left:540px;
+  width:100px;
+  text-align:center;
+  height:30px;
+  border:1px solid rgb(181, 181, 181)
+}
+
+.submit{
+  width:150px;
+  height:40px;
+  font-size:17px;
+  font-weight:bold;
+  position:absolute;
+  top:1280px;
+  left:900px;
+  text-align:center;
+  text-indent:0;
+  background:salmon;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+}
+
+.submit:hover{
+  background:#fff;
+  color:salmon;
+  border:1px solid salmon;
+}
+
+.auto{
+  position:absolute;
+  left:300px;
+}
+
+.inputauto{
+  position:absolute;
+  top:40px;
+  left:500px;
+  width:300px;
+  height:30px;
+  border:1px solid rgb(181, 181, 181)
+}
+
+.long{
+  height:160px;
+}
+
+textarea{
+  position:absolute;
+  left:300px;
+  height:150px;
+  width:600px;
+  text-indent:10px;
+  padding-top:8px;
+  border:1px solid rgb(181, 181, 181)
+}
+
+fieldset .autotext{
+  font-size:12px;
+  position:absolute;
+  top:100px;
+  left:300px;
+  line-height:17px;
+}

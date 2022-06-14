@@ -1,0 +1,436 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+/* TOP버튼 //////////////*/
+/* .top_btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:40px;
+  height:40px;
+  background-color: antiquewhite;
+  z-index:9999;
+  text-align:center;
+}
+
+.top_btn span{
+  font-size:30px;
+  line-height:40px;
+} */
+
+
+/* 로고/////////////// */
+.logo{
+  position:absolute;
+  left:40px;
+  top:10px;
+  z-index:1000;
+}
+
+.logo img{
+  width:220px;
+}
+
+.top input{
+  position:absolute;
+  top:40px;
+  right:200px;
+  width:150px;
+  height:30px;
+  z-index:100;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid #fff;
+  text-indent:20px;
+  color:#fff;
+}
+
+::-webkit-input-placeholder{color:rgb(234, 234, 234);}
+  /* placeholder 글자색변경(크롬적용)-> 접두사를 반드시 붙여야 적용됨 */
+
+.material-icons{
+  position:absolute;
+  top:42px;
+  right:210px;
+  z-index:100;
+  color:#fff;
+  cursor:pointer;
+}
+
+/* 전체메뉴버튼 ////////////*/
+
+.menu_toggle{
+  border:1px solid #fff;
+  width:50px;
+  height:50px;
+  z-index:10000;
+  position:relative;
+  left:95%;
+  top:30px;
+  cursor:pointer;
+}
+
+.menu_toggle:hover{
+  /* border:1px solid rgb(255, 209, 209); */
+  background:rgb(139, 196, 196);
+}
+
+
+.menu_toggle_btn{  /*전체메뉴버튼*/  
+	position:absolute;
+	top:25px;
+	right:0px;	
+	z-index:10001;  /*닫을수 있는버튼(close) 맨위로*/
+	display:block;
+	width:50px;
+  height:50px;
+	background:none;
+	outline:none;
+  border:none;
+  margin:0;
+  
+}
+
+.menu_toggle_btn span{  /*전체메뉴 가운데선*/ 
+	position:absolute;
+	left:0;
+	top:-2px;
+	width:70%;
+	height:4px;
+	background:#fff;
+	content:'';
+	transition:all 0.3s;
+	margin-left:15%;
+}
+
+.menu_toggle_btn:before,.menu_toggle_btn:after{  /*전체메뉴 가로선막대2개*/
+	position:absolute;
+	left:0;
+	width:70%;
+	height:4px;
+	background:#fff;
+	content:'';
+	transition:all 0.3s;
+	margin-left:15%;
+}
+
+.menu_toggle_btn:before{transform:translateY(-12px);}
+.menu_toggle_btn:after{transform:translateY(8px);}
+
+/*jquery에서 불러낼 클래스 "menu-open" */
+.menu_toggle_btn.menu-open:before{transform:translateY(0px) rotate(135deg);}
+.menu_toggle_btn.menu-open:after{transform:translateY(0px) rotate(-135deg);}
+.menu_toggle_btn.menu-open span{opacity:0;}  /*가로선3개중 가운데선*/
+
+
+/* 모달창///////// */
+.allmenu{   /*sitemap박스부분->FullScreen으로 맨위에 모달창*/
+	display:none;  /*->jQuery 에서 보이게 함*/
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;	
+  background:rgba(0,0,0,0.9);
+  z-index:1000;
+}
+
+
+/* 전체메뉴////////// */
+
+.allmenu>ul{
+  width:1400px;
+  margin:0 auto;
+  /* margin-top:370px; */
+}
+
+
+.allmenu>ul>li{
+  float:left;
+  width:278px;
+  height:1000px;
+  text-align:center;
+/*   border:1px solid #fff; */
+  padding-top:300px;
+/*   padding:41px 90px; */
+}
+
+.allmenu>ul>li:first-child{
+  padding-top:292px;
+}
+.allmenu>ul>li:hover{
+  background-color:rgba(48, 48, 48, 0.9);
+}
+
+.allmenu ul>li>a{
+  color:#fff;
+  font-size:40px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+
+.allmenu ul>li>ul{
+  margin-top:40px;
+}
+
+
+.allmenu ul>li>ul>li{
+  margin-top:20px;
+  position: relative;
+}
+
+.allmenu ul>li>ul>li>a{
+  font-size:20px;
+  font-weight:border;
+  color:#fff;
+  font-family: 'Nanum Gothic', sans-serif;
+
+}
+
+.allmenu ul>li>ul>li>a>span{
+  display:block;
+  width:0px;
+  height:2px;
+  background-image:linear-gradient(to right,transparent 0%,rgba(104, 217, 217,0.7) 50%,transparent 100%);
+  position:absolute;
+  top:27px;
+  left:50%;
+/*   border-bottom:1px solid rgb(66, 212, 212);  */
+  transform:translateX(-50%);
+  transition:all 0.3s;
+}
+
+.allmenu ul>li>ul>li>a:hover span{
+  width:120px;
+}
+
+.allmenu ul>li>ul>li>a:hover{
+  color:rgb(104, 217, 217); 
+}
+
+.allmenu ul>li:hover>a{color:rgb(104, 217, 217);}
+
+
+
+
+/* 메인비주얼////////// */
+
+.mainvisual ul li.main1{display:block;}  /*첫번째 이미지 보이게*/
+
+.mainvisual ul li.main1{background:url("../image/main1.png") no-repeat center center; background-size:cover;}
+.mainvisual ul li.main2{background:url("../image/main2.png") no-repeat center center; background-size:cover;}
+.mainvisual ul li.main3{background:url("../image/main3.jpg") no-repeat center center; background-size:cover;}
+.mainvisual ul li.main4{background:url("../image/main4.png") no-repeat center center; background-size:cover;}
+
+.mainvisual ul li.main4 span{
+  width:200px;
+  height:50px;
+  position:absolute;
+  top:710px;
+  left:850px;
+  text-align:center;
+  line-height:50px;
+  font-size:20px;
+  font-weight:bold;
+  background:rgb(255, 20, 59);
+  color:#fff;
+}
+
+.mainvisual{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+
+.mainvisual ul li{   /* 모든 이미지 같은 위치에 */
+  display:none;
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+}
+
+.mainvisual ul li a{
+  position:absolute;
+  background-color:red;
+}
+
+/* .blackbox{
+  width:100%;
+  height:150px;
+  background:rgba(0,0,0,0.6);
+  position:absolute;
+  bottom:0;
+} */
+
+/*버튼*/
+.mainvisual .btn{
+  position:absolute;
+  top:130px;
+  left:100px;
+}
+.mainvisual .btn>span{
+  display:inline-block;
+  width:11px;
+  height:11px;
+  margin-right:3px;
+  background:#d5d5d6;
+  cursor:pointer;
+}
+.mainvisual .btn>span.active{
+  display:inline-block;
+  width:30px;
+  height:11px;
+  background:#baafff;
+  border:1px solid #c4baff;
+}
+
+/*Play,Stop 버튼*/
+.mainvisual .playstop .stop{
+position:absolute;
+top:132px;
+left:200px;
+width:10px;
+height:10px;
+background:url(../image/main_stop.png) no-repeat;
+}
+
+.mainvisual .playstop .play{
+position:absolute;
+top:132px;
+left:200px;
+width:10px;
+height:10px;
+background:url(../image/main_play.png) no-repeat;
+}
+
+
+/* 하단퀵메뉴//////////// */
+
+.quick_toggle{  /*close->처음에 표시되는 close버튼*/
+/* 	position:fixed;
+	top:0; 
+	right:70px; 
+	width:70px;
+	height:70px;
+	background:url(../image/quick_close.png) no-repeat;
+	display:block;
+	cursor:pointer; */
+}
+
+.quick_open{   /*open->jquery에서 불러옴*/
+/* 	position:fixed; 
+	top:0; 
+	right:70px; 
+	width:70px;
+	height:70px;
+	background:url(../image/quick_open.png) no-repeat;
+	display:block;
+	cursor:pointer; */
+}
+
+
+.triangle-up {
+  position:fixed; 
+  bottom:120px;
+  left:47%;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 40px solid rgba(0,0,0,0.7);
+  cursor:pointer;
+}
+
+.quickmenu{
+	position:fixed; 
+	bottom:0px; 
+	width:100%;
+	height:120px;
+	background:rgba(0,0,0,0.6);
+}
+.quickmenu .quick_icon{padding-top:10px;}
+.quickmenu .quick_icon li{text-align:center;}
+
+.quickmenu .quick_bt{
+	position:absolute; 
+	bottom:0; 
+	right:0;
+}
+
+.quickmenu .quick_bt li{padding:1px 0;}
+
+.familybox{
+  width:140px;
+  height:27px;
+  background:rgba(255,255,255,0.5);
+  cursor:pointer;
+  position:relative;
+  top:40px;
+  left:80%;
+  text-indent:25px;
+  line-height:27px;
+  font-weight:bold;
+  color:#111;
+}
+
+.icon2{
+  color:#000;
+  position:absolute;
+  top:2px;
+  right:10px;
+  z-index:1000;
+  font-size:80px;
+}
+
+.icon3{
+  display:none;
+  color:#000;
+  position:absolute;
+  top:2px;
+  right:10px;
+  z-index:1000;
+  font-size:80px;
+}
+
+.familybox ul{
+  display:none;
+	position:absolute;
+	bottom:100%;
+	top:-121px;  /*목록버튼 클릭시 나오는 목록의 처음 위치를 설정함*/
+	left:0px;
+	background:#f6f6f6;
+	width:138px;
+  height:120px;
+	border:#c5c5c5 solid;
+	border-width:1px 1px 0 1px;	
+}
+
+.familybox ul li{
+  text-indent:0px;
+  font-size:12px;
+  text-align:center;
+  color:#222;
+  padding-bottom:3px;
+}
+
+.familybox ul li:hover{
+  background:rgba(114, 114, 114, 0.3);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
