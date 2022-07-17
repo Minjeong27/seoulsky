@@ -140,19 +140,19 @@ $("dl dt").click(function(){
 });	
 
 //탭메뉴 dt를 클릭시 바뀌는 dl의 전체배경이미지
-$("dl .tab1 a").click(function(){
+$("dl .tab1").click(function(){
   $("dl").css({"background":"url(image/skyfriends1.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
 });
 
-$("dl .tab2 a").click(function(){
+$("dl .tab2").click(function(){
   $("dl").css({"background":"url(image/skyfriends2.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
 });
 
-$("dl .tab3 a").click(function(){
+$("dl .tab3").click(function(){
   $("dl").css({"background":"url(image/skyfriends3.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
 });
 
-$("dl .tab4 a").click(function(){
+$("dl .tab4").click(function(){
   $("dl").css({"background":"url(image/skyfriends4.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
 });
 
