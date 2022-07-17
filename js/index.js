@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
-/* 햄버거메뉴 ///////////////// */
+/* 햄버거메뉴 /////////////////////// */
   $(".menu_toggle").click(function(){
     $(this).toggleClass("menu-open");
     $(".allmenu").slideToggle("fast");
 
   });
 
-/* /////////Main VisualImage///////// */
+/* ///////////Main VisualImage/////////// */
 
 let img=$(".mainvisual ul li");
 let btn=$(".mainvisual .btn>span");	
@@ -113,7 +113,7 @@ $(".familybox").click(function(){
 	
 })
 
-/* 서브//////////////////// */
+/* /////////////////////////////서브///////////////////////////// */
 
 $(".header-navi").mouseenter(function(){ //주메뉴영역에 오버시
 	$(this).find("li>ul").stop().slideDown(800,"easeOutBounce");
@@ -127,9 +127,112 @@ $("header").mouseleave(function(){ //헤더영역을 나갔을때
 
 });
 
+/* __________________SEOULSKY 소개_________________ */
+
+
+$("dl dt").click(function(){
+
+  $("dl dt").find("+dd").stop().hide("fast"); //기존에 보이는것은 다른것 선택할때 올라가게
+  $(this).find("+dd").show("fast"); //tab2에서 slide-> show,hide로만 바꿈
+
+  $("dt").removeClass("selected"); 
+  $(this).addClass("selected"); 
+});	
+
+//탭메뉴 dt를 클릭시 바뀌는 dl의 전체배경이미지
+$("dl .tab1 a").click(function(){
+  $("dl").css({"background":"url(image/skyfriends1.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
+});
+
+$("dl .tab2 a").click(function(){
+  $("dl").css({"background":"url(image/skyfriends2.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
+});
+
+$("dl .tab3 a").click(function(){
+  $("dl").css({"background":"url(image/skyfriends3.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
+});
+
+$("dl .tab4 a").click(function(){
+  $("dl").css({"background":"url(image/skyfriends4.png) no-repeat center center","transition":"all 1s","background-size":"contain"});
+});
+
+/* $(".skyfriends dl dt a").on("click",function(event){
+  event.preventDefault();
+  }); */
+
+
+/* __________________갤러리_________________ */
+
+//썸네일, 큰이미지, 설명텍스트가 바뀌는 함수만들기
+
+let goldidx=0; // 기존이미지
+let gidx=0; //선택되는 이미지
+
+function galleryImg(gidx){ //gidx는 선택되는 이미지
+
+if(goldidx!=gidx){ //기존의 이미지와 선택된 이미지가 다를때만 실행해라..}
+
+  $(".thumbs li").eq(goldidx).css({"opacity":0.4}); //기존의 썸네일 흐리게
+  $(".thumbs li").eq(gidx).css({"opacity":1}); //선택된 썸네일 선명하게
+  $(".largeImg li").eq(goldidx).stop().fadeOut(300); //기존 이미지 사라짐
+  $(".largeImg li").eq(gidx).stop().fadeIn(300); //선택된 이미지 나타남
+  $(".imgText li").eq(goldidx).stop().fadeOut(300); //기존 텍스트 사라짐
+  $(".imgText li").eq(gidx).stop().fadeIn(300); //선택된 텍스트 나타남
+
+}
+goldidx=gidx; //선택된 이미지는 다시 기존이미지로 저장
+
+}
+
+//썸네일버튼 클릭시....
+
+$(".thumbs li").click(function(){
+  gidx=$(this).index();
+  galleryImg(gidx);
+});
 
 
 
+//이전버튼 클릭시....
+
+$(".left_btn").click(function(){
+  gidx--;
+  if(gidx<0){ //선택한 이미지가 0일때 다시 맨뒤부터 다시 시작
+    gidx=8;
+  }
+  galleryImg(gidx);
+});
+
+
+
+//다음버튼 클릭시....
+
+$(".right_btn").click(function(){
+  gidx++;
+  if(gidx>8){ //선택한 이미지가 마지막일때 다시 맨처음부터 다시 시작
+    gidx=0;
+  }
+  galleryImg(gidx);
+});
+
+/* __________________어트랙션_________________ */
+
+
+$(".tab li").click(function(){
+
+  val=$(this).index();
+  tnum=+200*val; //가로폭 120px씩 증가됨
+
+  $(".tab-header .tab-highlight").animate({left:tnum});
+  $(".tab li a").css("color","#000"); //탭의 모든 글자색
+  $(this).find(">a").css({"color":"#fff"}); //선택된 탭의 글자색
+
+  $(".panel li").hide(); //기존의  보여진 내용 숨기기
+  $($(this).find(">a").attr("href")).fadeIn(); //새로 선택된 내용 href 연결된 내용 보여주기
+
+
+
+});
 
 
 

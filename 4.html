@@ -15,32 +15,32 @@
             <ul class="clear">
               <li><a href="#">SEOUL SKY</a>
                 <ul>
-                  <li><a href="#">SEOUL SKY 소개</a></li>
-                  <li><a href="#">갤러리<span></span></a></li>
-                  <li><a href="#">오시는길<span></span></a></li>
+                  <li><a href="1.html">SEOUL SKY 소개</a></li>
+                  <li><a href="2.html">갤러리<span></span></a></li>
+                  <li><a href="3.html">오시는길<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">시설안내</a>
                 <ul>
-                  <li><a href="#">어트랙션<span></span></a></li>
-                  <li><a href="#">시설소개<span></span></a></li>
+                  <li><a href="4.html">어트랙션<span></span></a></li>
+                  <li><a href="5.html">시설소개<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">관람안내</a>
                 <ul>
-                  <li><a href="#">이용안내<span></span></a></li>
-                  <li><a href="#">우대혜택<span></span></a></li>
+                  <li><a href="6.html">이용안내<span></span></a></li>
+                  <li><a href="7.html">우대혜택<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">온라인예매</a>
                 <ul>
-                  <li><a href="#">이용권예매<span></span></a></li>
+                  <li><a href="8.html">이용권예매<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">고객센터</a>
                 <ul class="last">
-                  <li><a href="#">FAQ<span></span></a></li>
-                  <li><a href="#">이용문의<span></span></a></li>
+                  <li><a href="9.html">FAQ<span></span></a></li>
+                  <li><a href="10.html">이용문의<span></span></a></li>
                 </ul>
               </li>
             </ul>
@@ -49,13 +49,70 @@
       <div class="bg_box"></div>
     </header>
     <div class="subtop4"></div>
-    <section>
-      <div class="section_in">
+    <section class="section4">
         <h2>어트랙션</h2>
         <div class="contents">
+          <div id="tabmenu">
+            <!--탭메뉴-->
+            <div class="tab-header">
+                <div class="tab_box"> <!--(수정) ul과 span을 감싸는 부모를 하나 더 만든다.-->
+                    <ul class="tab">
+                        <li><a href="#tab1" class="active" onclick="return false">스카이데크</a></li>
+                        <li><a href="#tab2" onclick="return false">스카이테라스</a></li>
+                        <li><a href="#tab3" onclick="return false">스카이셔틀</a></li>
+                        <li><a href="#tab4" onclick="return false">미디어 테이블</a></li>
+                        <li><a href="#tab5" onclick="return false">포토존</a></li>              
+                    </ul>
+                    <span class="tab-highlight"></span> <!-- (수정)ul밖으로 위치 이동 ,움직이는 탭메뉴 선택되는 화살표모양박스-->
+                </div>        
+            </div>
             
+            <!--탭메뉴 클릭시 바뀌는 하단내용-->
+            <div class="tab-content">
+                <ul class="panel">
+                    <li id="tab1">
+                        <img src="image/attraction1.jpg" alt="work1">
+                        <div class="content">
+                            <h3 class="title">스카이데크<span>118F</span></h3>
+                            <p class="description">기네스 월드 레코드에 '가장 높은 유리바닥 전망대'로 오른 스카이데크에서 하늘을 걷는 듯한 기분을 느껴보세요. </p>
+                        </div>
+                    </li>
+                    <li id="tab2">
+                        <img src="image/attraction2.jpg" alt="work2">
+                        <div class="content">
+                            <h3 class="title">스카이테라스<span>120F</span></h3>
+                            <p class="description">486m 높이의 120층 야외테라스에서 시원한 외부 공기와 함께 상쾌하면서도 탁 트인 서울의 전망을 만끽해 보세요. </p>
+                        </div>
+                    </li>
+                    <li id="tab3">
+                        <img src="image/attraction3.jpg" alt="work3">
+                        <div class="content">
+                            <h3 class="title">스카이셔틀</h3>
+                            <p class="description">지하 1층에서 118층까지 단 1분만에 순간이동!
+                                세계 최초로 천장과 벽체3면에 모니터 화면이 설치되어 있어 VR을 탑승하는 듯한 몰입감을 선사합니다. </p>
+                        </div>
+                    </li>
+                    <li id="tab4">
+                        <img src="image/attraction4.jpg" alt="work4">
+                        <div class="content">
+                            <h3 class="title">미디어 테이블</h3>
+                            <p class="description">전망대에서 바라본 서울의 현재 모습 뿐만 아니라 3D 환경으로 재현된 조선시대의 모습을 확인할 수 있는 디지털 컨텐츠를 제공합니다.
+                                원하는 정보들을 간단히 스크린 터치를 통해 볼 수 있습니다. </p>
+                        </div>
+                    </li>
+                    <li id="tab5">
+                        <img src="image/attraction5.jpg" alt="work5">
+                        <div class="content">
+                            <h3 class="title">포토존</h3>
+                            <p class="description">찍는곳 : B1F, 117F, 118F, 120F
+                                찾는곳 : 120F, B1F(퇴장로)
+                                * 인화시 별도 요금이 발생합니다. </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
         </div>
-      </div>
     </section>
     <footer>
       <div class="f_image"></div>

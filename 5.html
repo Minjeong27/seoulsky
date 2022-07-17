@@ -15,32 +15,32 @@
             <ul class="clear">
               <li><a href="#">SEOUL SKY</a>
                 <ul>
-                  <li><a href="#">SEOUL SKY 소개</a></li>
-                  <li><a href="#">갤러리<span></span></a></li>
-                  <li><a href="#">오시는길<span></span></a></li>
+                  <li><a href="1.html">SEOUL SKY 소개</a></li>
+                  <li><a href="2.html">갤러리<span></span></a></li>
+                  <li><a href="3.html">오시는길<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">시설안내</a>
                 <ul>
-                  <li><a href="#">어트랙션<span></span></a></li>
-                  <li><a href="#">시설소개<span></span></a></li>
+                  <li><a href="4.html">어트랙션<span></span></a></li>
+                  <li><a href="5.html">시설소개<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">관람안내</a>
                 <ul>
-                  <li><a href="#">이용안내<span></span></a></li>
-                  <li><a href="#">우대혜택<span></span></a></li>
+                  <li><a href="6.html">이용안내<span></span></a></li>
+                  <li><a href="7.html">우대혜택<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">온라인예매</a>
                 <ul>
-                  <li><a href="#">이용권예매<span></span></a></li>
+                  <li><a href="8.html">이용권예매<span></span></a></li>
                 </ul>
               </li>
               <li><a href="#">고객센터</a>
                 <ul class="last">
-                  <li><a href="#">FAQ<span></span></a></li>
-                  <li><a href="#">이용문의<span></span></a></li>
+                  <li><a href="9.html">FAQ<span></span></a></li>
+                  <li><a href="10.html">이용문의<span></span></a></li>
                 </ul>
               </li>
             </ul>
@@ -49,11 +49,101 @@
       <div class="bg_box"></div>
     </header>
     <div class="subtop5"></div>
-    <section>
+    <section class="section5">
       <div class="section_in">
         <h2>시설소개</h2>
         <div class="contents">
+          <div id="tabmenu">
+            <!--탭메뉴-->
+            <div class="tab-header">
+                <div class="tab_box"> <!--(수정) ul과 span을 감싸는 부모를 하나 더 만든다.-->
+                    <ul class="tab">
+                        <li><a href="#tab1" class="active" onclick="return false">스카이 맵핑쇼</a></li>
+                        <li><a href="#tab2" onclick="return false">SKY SHOW<br>(스카이쇼)</a></li>
+                        <li><a href="#tab3" onclick="return false">SKY PLATFORM<br>(전시존)</a></li>
+                        <li><a href="#tab4" onclick="return false">메인전망대</a></li>
+                        <li><a href="#tab5" onclick="return false">상품점</a></li>     
+                        <li><a href="#tab6" onclick="return false">카페 & 라운지</a></li>            
+                    </ul>
+                    <span class="tab-highlight"></span> <!-- (수정)ul밖으로 위치 이동 ,움직이는 탭메뉴 선택되는 화살표모양박스-->
+                </div>        
+            </div>
             
+            <!--탭메뉴 클릭시 바뀌는 하단내용-->
+            <div class="tab-content">
+                <ul class="panel">
+                    <li id="tab1">
+                        <img src="image/facility1.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">스카이 맵핑쇼<span>121F</span></h3>
+                            <p class="description">서울 도심에서 펼쳐지는 신비로운 오로라와 화려한 불꽃쇼로 여러분을 초대합니다.</p>
+                        </div>
+                    </li>
+                    <li id="tab2">
+                        <img src="image/facility2.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">스카이쇼(대기실)<span>117F</span></h3>
+                            <p class="description">영상미디어관과 현실을 잇는 매개 공간으로서 천상의 세계로 가는 블랙홀 같은 공간입니다.</p>
+                        </div>
+                        <img src="image/facility3.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">스카이쇼(미디어관)<span>117F</span></h3>
+                            <p class="description">하늘 위에서 펼쳐지는 영상쇼를 볼 수 있는 곳으로서 천상으로의 황금열쇠를 받은 고객들이 롯데월드타워를 출발해 세계 랜드마크를 돌아오는 환상적인 여행을 함께 할 수 있는 공간입니다.</p>
+                        </div>
+                    </li>
+                    <li id="tab3">
+                        <img src="image/facility4.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">한국의탄생(대기존)<span>B1F</span></h3>
+                            <p class="description">지하 1층 대기공간에서는 한국의 탄생과 성장의 역사, 한국의 자부심을 보여주는 다양한 연출들을 만나볼 수 있습니다.<br>
+                              음과 양의 조화와 순환, 그리고 두 기운이 만나 상생과 번영을 이루는 과정을 그래픽적으로 승화시킨 다양한 미디어 작품들을 통해 한국의 전통미와 자부심을 느낄 수 있는 공간입니다.</p>
+                        </div>
+                        <img src="image/facility5.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">SKY PLATFORM(전시존)<span>B2F</span></h3>
+                            <p class="description">전망대에서 바라본 서울의 현재 모습 뿐만 아니라 3D 환경으로 재현된 조선시대의 모습을 확인할 수 있는 디지털 컨텐츠를 제공합니다.<br>
+                                원하는 정보들을 간단히 스크린 터치를 통해 볼 수 있습니다. </p>
+                        </div>
+                    </li>
+                    <li id="tab4">
+                        <img src="image/facility6.jpg" alt="">
+                        <div class="content">
+                            <h3 class="title">스카이 시어터<span>118F</span></h3>
+                            <p class="description">악천후 또는 기상이 좋지 않을 경우를 대비한 컨텐츠로 맑은 날의 풍경을 타임랩스 기법을 통해 다채롭게 관람할 수 있습니다.</p>
+                        </div>
+                    </li>
+                    <li id="tab5">
+                        <img src="image/facility7.jpg" alt="work5">
+                        <div class="content">
+                            <h3 class="title">SEOUL SKY SHOP<span>B1F</span></h3>
+                            <p class="description">전망대의 마지막 코스, 메인 상품점에서 특별한 오늘을 기념할 상품을 구경 해보세요!<br>
+                              SEOUL SKY에서의 아름다운 추억을 상품과 함께 하세요.<br>
+                              전망층에 올라가지 않더라도 전망대를 방문했던 그 날을 추억하기 위해 언제든지 들러서 상품을 구매할 수 있습니다.</p>
+                        </div>
+                        <img src="image/facility8.jpg" alt="work5">
+                        <div class="content">
+                            <h3 class="title">SEOUL SKY SHOP<span>121F</span></h3>
+                            <p class="description">전망대에서 느낀 짜릿함과 행복감을 간직한 채 상공 500m에서 SEOUL SKY 상품을 구경하세요!<br>
+                              눈을 크게 뜨고 하나 하나 살펴 보며 꼭 갖고 싶은 나만의 상품을 찾아 보세요.</p>
+                        </div>
+                    </li>
+                    <li id="tab6">
+                      <img src="image/facility9.jpg" alt="work5">
+                      <div class="content">
+                          <h3 class="title">LOUNGE<span>123F</span></h3>
+                          <p class="description">Taste of Seoul above the cloud 구름 위에서 잊지 못할 서울을 만나다<br>- 높고 웅장한 커튼월을 통한 최고층의 전망과 함께 다양한 메뉴를 즐길 수 있는 프리미엄 라운지<br>
+                            - 프로포즈 이벤트, 웨딩 피로연, 브랜드 론칭 행사 등 대관이 가능합니다. (02-3213-8019)</p>
+                      </div>
+                      <img src="image/facility10.jpg" alt="work5">
+                        <div class="content">
+                            <h3 class="title">SEOUL SKY CAFÉ<span>122F</span></h3>
+                            <p class="description">하늘 아래 가장 높은 카페 - 엔제리너스 커피 전문점<br>서울스카이에서만 즐길 수 있는 시그니처 음료를 즐겨보세요</p>
+                        </div>
+                  </li>
+                </ul>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

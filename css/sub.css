@@ -2,194 +2,710 @@
 @import url(header.css);
 @import url(footer.css);
 
-
-
-section{
-  background:#fff;
-  height:1100px;
+body{
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
-.section3{
-  height:1850px;
+section {
+  background: #fff;
+  height: 1100px;
 }
 
-.section6{
-  height:1300px;
-}
-
-.section7{
-  height:1400px;
-}
-
-.section_in{
-  width:1200px;
-  background:#fff;
-  margin:0 auto;
-  padding-bottom:30px;
+.section_in {
+  width: 1200px;
+  background: #fff;
+  margin: 0 auto;
+  padding-bottom: 30px;
   /* background: yellow; */
 }
 
-.section_in h2{ /* 서브페이지 제목 공통 */
-  color:#555;
+section h2 {
+  /* 서브페이지 제목 공통 */
+  color: rgb(46, 46, 46);
+  font-size: 32px;
+  text-align: center;
+  padding: 40px 0 20px 0;
+  border-bottom: 1px solid rgb(227, 193, 42);
+  width: 240px;
+  margin: 0 auto;
+}
+
+.contents {
+  padding-top: 50px;
+}
+
+/* seoulsky소개 SUBPAGE//////////////////////// */
+.section1{
+  height:2250px;
+}
+
+.section1 .naming-bi{
+  display:flex;
+  margin-top:90px;
+}
+
+.section1 .naming-bi li{
+  width:33%;
+  font-size:16px;
+  line-height:24px;
+  text-align:center;
+  color:rgb(54, 54, 54);
+}
+
+.section1 .naming-bi li img{
+
+}
+
+.section1 .naming-bi strong{
+  font-size:22px;
+  color:#969dc6;
+}
+
+.section1 .naming-bi li .p1{
   font-size:30px;
+  margin:15px 0;
+  line-height:40px;
+  color:rgb(54, 54, 54);
+}
+
+.section1 .naming{
+  margin-top:50px;
+}
+
+.section1 .bi{
+  margin-top:50px;
+}
+
+.section1 h3{
+  font-weight:bold;
+  font-size:30px;
+  margin-top:140px;
+  margin-bottom:60px;
+  color:rgb(54, 54, 54);
+}
+
+.section1 .sky_intro{
+  display:flex;
+}
+
+.section1 .sky_intro li{
+  width:33.3%;
   text-align:center;
-  padding:40px 0 20px 0;
-  border-bottom:1px solid rgb(227, 193, 42);
-  width:240px;
-  margin:0 auto;
 }
 
-.contents{
-  padding-top:50px;
+.section1 .sky_text{
+  display:flex;
 }
 
-
-
-/* MAP SUBPAGE//////////////////////// */
-.map{
+.section1 .sky_text li{
+  width:33.3%;
   text-align:center;
-  margin-bottom:80px;
-}
-
-
-.public{
-  font-weight:bold;
-  font-size:27px;
-  margin:60px 0 20px 0;
-}
-
-.subway2{
-  border:3px solid green;
-  border-radius:7px;
-  color:green;
+  padding:0 15px;
+  margin-top:30px;
   font-size:17px;
-  font-weight:bold;
-  padding:2px 5px;
-  margin-right:10px;
+  line-height:24px;
 }
 
-.subway8{
-  border:3px solid rgb(251, 45, 127);
-  border-radius:7px;
-  color:rgb(251, 45, 127);
-  font-size:17px;
-  font-weight:bold;
-  padding:2px 5px;
-  margin-right:10px;
+.skyfriends dl {
+  /*1번째 배경이미지->나머지는 jquery에서 불러냄*/
+  width: 1100px;
+  height: 400px;
+  margin: 0 auto;
+  background: url(../image/skyfriends1.png) no-repeat center center;
+  margin-top:-100px;
+  background-size: contain;
+  overflow: hidden;
 }
 
-.subway_in{
-  font-size:16px;
-  color:#222;
-  font-weight:bold;
+.skyfriends dl dt:nth-of-type(1) {background: #f9a107;}
+.skyfriends dl dt:nth-of-type(2) {background: #d44877;}
+.skyfriends dl dt:nth-of-type(3) {background: #7a32b8;}
+.skyfriends dl dt:nth-of-type(4) {background: #45868c;}
+
+.skyfriends dl dt {
+  /*탭부분*/
+  position: relative;
+  width: 60px;
+  height: 400px;
+  background: rgba(51, 102, 204, 0.6);
+  border-right: 1px solid rgba(2555, 255, 255, 0.6);
+  float: left;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding-left: 21px;
 }
 
-.bus1{
-  border:3px solid skyblue;
-  border-radius:7px;
-  color:skyblue;
-  font-size:17px;
-  font-weight:bold;
-  padding:2px 5px;
-  margin-right:10px;
+.skyfriends dl dt a {
+  position: absolute;
+  top: 30px;
+  color: rgb(232, 232, 232);
+  font-size: 20px;
+  padding-top: 30px;
+  /* border:1px solid; */
+  pointer-events: none; 
 }
 
-.bus2{
-  border:3px solid orange;
-  border-radius:7px;
-  color:orange;
-  font-size:17px;
-  font-weight:bold;
-  padding:2px 5px;
-  margin-right:10px;
+.skyfriends dl .selected a {
+  /*제목선택시->jquery에서 불러냄*/
+  cursor: default;
+  color: #fff;
+  font-weight: bold;
 }
 
-.bus3{
-  border:3px solid purple;
-  border-radius:7px;
-  color:purple;
-  font-size:17px;
-  font-weight:bold;
-  padding:2px 5px;
-  margin-right:10px;
+.skyfriends dl dd {
+  /*각 탭의 내용*/
+  width: 800px;
+  height: 500px;
+  display: none;
+  float: left;
+  position: relative;
+  overflow: auto;
+  /*background:pink;*/
 }
 
-.bus1_in, .bus2_in, .bus3_in{
-  font-size:16px;
-  color:#222;
-  font-weight:bold;
+.skyfriends dl dd:first-of-type {
+  display: block;
 }
 
-.parkingtext1{
-  font-size:15px;
-  color:#222;
-  font-weight:bold;
-  text-indent:3px;
-  margin-bottom:10px;
+.skyfriends .content {
+  padding: 30px;
+  position: absolute;
+  top:-80px;
+  /* border:1px solid; */
 }
 
-.parkingtext2{
-  font-size:13px;
-  color:#222;
-  margin-left:10px;
-  line-height:17px;
+.skyfriends .content .title {
+  font-size: 42px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-bottom: 25px;
 }
 
-.youtube{
-  margin-top:80px;
+.skyfriends .title1 {color:#f9a107;}
+.skyfriends .title2 {color:#d44877;}
+.skyfriends .title3 {color:#7a32b8;}
+.skyfriends .title4 {color:#45868c;}
+
+
+.skyfriends .content .description {
+  color: rgb(37, 37, 37);
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.skyfriends ul{
+  display:flex;
+}
+
+.skyfriends ul li{
   text-align:center;
+  /* border:1px solid; */
+  position:relative;
+  top:-100px;
+}
+
+.skyfriends ul li:first-child{
+  width:50%;
+  margin-left:60px;
+}
+.skyfriends ul li:last-child{
+  width:40%;
+}
+
+.skyfriends ul li img{
+  width:280px;
+}
+
+.skyfriends .friends{
+  font-size:19px;
+  display:flex;
+  align-items:center;
+  text-align:left;
+  line-height:28px;
+}
+
+/* 갤러리 SUBPAGE////////////////////// */
+
+.section2 #gallery {
+  width: 1200px;
+  height: 760px;
+  background: #fff;
+  position: relative;
+}
+
+.section2 .largeImg li {
+  display: none;
+  position: absolute;
+  top: 21px;
+  left: 50px;
+}
+
+.section2 .largeImg li:first-child {
+  display: block;
+}
+
+.section2 .largeImg img {
+  width: 1100px;
+  height: 700px;
+}
+
+.section2 .thumbs {
+  position: absolute;
+  top: 46px;
+  left: 140px;
+}
+
+.section2 .thumbs li {
+  float: left;
+  margin-right: 15px;
+  opacity: 0.4;
+}
+
+.section2 .thumbs li:first-child {
+  opacity: 1;
+}
+
+.section2 .thumbs li a img {
+  width: 90px;
+  height: 65px;
+}
+
+.section2 .left_btn {
+  position: absolute;
+  left: 40px;
+  top: 340px;
+  opacity: 0.6;
+}
+
+.section2 .right_btn {
+  position: absolute;
+  right: 40px;
+  top: 340px;
+  opacity: 0.6;
+}
+
+.section2 .left_btn:hover,
+.section2 .right_btn:hover {
+  opacity: 1;
+}
+
+/*이미지별 텍스트*/
+
+.section2 .imgText li {
+  display: none;
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+}
+
+.section2 .imgText li:first-child {
+  display: block;
+}
+
+.section2 .imgText li strong {
+  color: #fff;
+  font-size: 40px;
+}
+
+
+/* 오시는길 SUBPAGE//////////////////////// */
+.section3 {
+  height: 1850px;
+}
+
+.section3 .map {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+
+.section3 .public {
+  font-weight: bold;
+  font-size: 27px;
+  margin: 60px 0 20px 0;
+}
+
+.section3 .subway2 {
+  border: 3px solid green;
+  border-radius: 7px;
+  color: green;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 10px;
+}
+
+.section3 .subway8 {
+  border: 3px solid rgb(251, 45, 127);
+  border-radius: 7px;
+  color: rgb(251, 45, 127);
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 10px;
+}
+
+.section3 .subway_in {
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+}
+
+.section3 .bus1 {
+  border: 3px solid skyblue;
+  border-radius: 7px;
+  color: skyblue;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 10px;
+}
+
+.section3 .bus2 {
+  border: 3px solid orange;
+  border-radius: 7px;
+  color: orange;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 10px;
+}
+
+.section3 .bus3 {
+  border: 3px solid purple;
+  border-radius: 7px;
+  color: purple;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 2px 5px;
+  margin-right: 10px;
+}
+
+.section3 .bus1_in,
+.section3 .bus2_in,
+.section3 .bus3_in {
+  font-size: 16px;
+  color: #222;
+  font-weight: bold;
+}
+
+.section3 .parkingtext1 {
+  font-size: 15px;
+  color: #222;
+  font-weight: bold;
+  text-indent: 3px;
+  margin-bottom: 10px;
+}
+
+.section3 .parkingtext2 {
+  font-size: 13px;
+  color: #222;
+  margin-left: 10px;
+  line-height: 17px;
+}
+
+.section3 .youtube {
+  margin-top: 80px;
+  text-align: center;
 
 }
+
+
+
+/* 어트랙션 SUBPAGE//////////////////////// */
+.section4{
+  height:1100px ;
+}
+
+.section4 #tabmenu {
+  width: 100%;
+}
+
+.section4 .tab-header {
+  width: 1000px;
+  height: 70px;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section4 .tab_box {
+  float: left;
+  width: 1000px;
+  height: 70px;
+  /* background:yellow; */
+}
+
+.section4 .tab li {
+  width: 200px;
+  /*->jQuery에서 탭메뉴 움직이는 거리*/
+  height: 70px;
+  box-sizing: border-box;
+  float: left;
+
+}
+
+.section4 .tab li a {
+  display: block;
+  color: rgb(31, 31, 31);
+  font-size: 20px;
+  line-height: 70px;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 100;
+  font-weight: bold;
+}
+
+.section4 .tab li a.active {
+  color: #fff;
+}
+
+/*1번째 선택된 글자색 */
+
+.section4 .tab-highlight {
+  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
+  background: #8abeef;
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  left: 0px;
+}
+
+
+/*Tab Mneu Contents ---------------------------------------*/
+
+.section4 .tab-content {
+  width: 100%;
+}
+
+.section4 .panel {
+  clear: both;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.section4 .panel li {
+  width: 100%;
+  height: 400px;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.section4 .panel li img {
+  width: 100%;
+}
+
+.section4 .panel li:first-child {
+  display: block;
+}
+
+.section4 .tab-content .content {
+  position: absolute;
+  width: 100%;
+  height: 130px;
+  color: rgb(255, 255, 255);
+  background: rgba(0, 0, 0, 0.598);
+  bottom: -280px;
+  left: 0px;
+  padding-left: 100px;
+}
+
+.section4 .content .title {
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 18px 0;
+}
+
+
+.section4 .panel span {
+  font-size: 27px;
+  margin-left: 10px;
+  color: #94a2f9;
+}
+
+.section4 .content .description {
+  font-size: 15px;
+  line-height: 22px;
+}
+
+
+/* 시설소개 SUBPAGE//////////////////////// */
+.section5{
+  height:1650px ;
+}
+
+.section5 #tabmenu {
+  width: 100%;
+}
+
+.section5 .tab-header {
+  width: 1200px;
+  height: 70px;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+}
+
+.section5 .tab_box {
+  float: left;
+  width: 1200px;
+  height: 70px;
+  /* background:yellow; */
+}
+
+.section5 .tab li {
+  width: 200px;
+  /*->jQuery에서 탭메뉴 움직이는 거리*/
+  height: 70px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.section5 .tab li a {
+  display: block;
+  color: rgb(31, 31, 31);
+  font-size: 17px;
+  text-align: center;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 100;
+  font-weight: bold;
+  margin-top:15px;
+}
+
+.section5 .tab li a.active {
+  color: #fff;
+}
+
+/*1번째 선택된 글자색 */
+
+.section5 .tab-highlight {
+  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
+  background: #8abeef;
+  height: 100%;
+  position: absolute;
+  width: 200px;
+  left: 0px;
+}
+
+
+/*Tab Mneu Contents ---------------------------------------*/
+
+.section5 .tab-content {
+  width: 100%;
+}
+
+.section5 .panel {
+  clear: both;
+  width: 100%;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.section5 .panel li {
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.section5 .panel li img {
+  width: 100%;
+}
+
+.section5 .panel li:first-child {
+  display: block;
+}
+
+.section5 .tab-content .content {
+  width: 100%;
+  height: 130px;
+  color: #333;
+  margin-bottom:70px;
+}
+
+.section5 .content .title {
+  font-size: 34px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 18px 0;
+}
+
+
+.section5 .panel span {
+  font-size: 27px;
+  margin-left: 10px;
+  color: #94a2f9;
+}
+
+.section5 .content .description {
+  font-size: 16px;
+  line-height: 23px;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* 이용안내 SUBPAGE//////////////////////// */
-
-.guide h3{
-  font-size:24px;
-  font-weight:bold;
-  margin-bottom:20px;
+.section6 {
+  height: 1300px;
 }
 
-.guide h4{
-  font-size:17px;
-  font-weight:bold;
-  margin:30px 0 10px 0;
-  color:rgb(0, 79, 189)
+.section6 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.guide table{
-  text-align:center;
+.section6 h4 {
+  font-size: 17px;
+  font-weight: bold;
+  margin: 30px 0 10px 0;
+  color: rgb(0, 79, 189)
 }
 
-.contents{
-
+.section6 table {
+  text-align: center;
 }
 
-.ticket{
-  margin-bottom:70px;
-  line-height:24px;
-  font-size:13px;
+.section6.ticket {
+  margin-bottom: 70px;
+  line-height: 24px;
+  font-size: 13px;
 }
 
-.time_down{
-  margin:20px 0 30px 0;
-  line-height:24px;
-  font-size:13px;
+.section6.time_down {
+  margin: 20px 0 30px 0;
+  line-height: 24px;
+  font-size: 13px;
 }
 
-.ticket_down{
-  margin-top:20px;
-  line-height:24px;
-  font-size:13px;
+.section6.ticket_down {
+  margin-top: 20px;
+  line-height: 24px;
+  font-size: 13px;
 }
 
-.table1{
-  border:1px solid rgb(234, 234, 234);
-  border-top:2px solid rgb(113, 113, 113);
+.section6.table1 {
+  border: 1px solid rgb(234, 234, 234);
+  border-top: 2px solid rgb(113, 113, 113);
 }
 
-.table2{
-  border:1px solid rgb(234, 234, 234);
-  border-top:2px solid rgb(113, 113, 113);
+.section6.table2 {
+  border: 1px solid rgb(234, 234, 234);
+  border-top: 2px solid rgb(113, 113, 113);
 }
 
 
@@ -197,154 +713,243 @@ section{
 
 
 
-/* SPECIAL SUBPAGE//////////////////////// */
-.special{
-  
+/* 우대혜택 SUBPAGE//////////////////////// */
+.section7 {
+  height: 1400px;
 }
 
-.special ul{
-  padding-left:30px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-flow:wrap;
-
-}
-
-.special ul li{
-  position:relative;
-  margin:10px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-flow:wrap;
-  width:260px;
-}
-
-.special ul img{
+.section7 ul {
+  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
 
 }
 
-.special ul li span{
-  background:rgba(0,0,0,0.8);
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:100%;
-  height:0px;
-  opacity:0;
-  color:#fff;
-  margin-top:10px;
-  font-size:18px;
-  transition:all 0.3s;
+.section7 ul li {
+  position: relative;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  width: 260px;
+}
+
+.section7 ul li span {
+  background: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 18px;
+  transition: all 0.3s;
 
 }
 
-.special ul li:hover span{
-  height:185px;
-  opacity:1;
+.section7 ul li:hover span {
+  height: 185px;
+  opacity: 1;
 }
 
-.special ul li a{
-
+.section7 ul li .text {
+  position: absolute;
+  top: 105px;
+  left: 10%;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 10;
+  text-align: center;
 }
 
-.special ul li .text{
-  position:absolute;
-  top:105px;
-  left:10%;
-  color:#fff;
-  font-weight:bold;
-  font-size:18px; 
-  z-index:10;
-  text-align:center;
-  
+.section7 ul li .htext {
+  position: absolute;
+  top: 160px;
+  left: 20%;
+  color: #fff;
+  z-index: 10;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
-.special ul li .htext{
-  position:absolute;
-  top:160px;
-  left:20%;
-  color:#fff;
-  z-index:10;
-  font-weight:bold;
-  opacity:0;
-  transition:all 0.3s;
+.section7 ul li .view {
+  position: absolute;
+  top: 200px;
+  left: 35%;
+  color: #fff;
+  z-index: 10;
+  font-weight: bold;
+  border: 1px solid #fff;
+  padding: 8px 25px;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
-.special ul li .view{
-  position:absolute;
-  top:200px;
-  left:35%;
-  color:#fff;
-  z-index:10;
-  font-weight:bold;
+.section7 ul li:hover .htext {
+  opacity: 1;
+}
+
+.section7 ul li:hover .view {
+  opacity: 1;
+}
+
+
+
+/* 이용권예매 SUBPAGE//////////////////////// */
+
+.section8{
+  height:850px;
+}
+.section_in{
+/*   border:1px solid blue; */
+}
+
+.section8 .swiper-container {
+  width: 100%;
+  height: 550px;
+  margin: 20px auto;
+  background-color: #efefef;
+  border-radius:5px;
+}
+
+.section8 .swiper-slide {
+  margin-top:75px;
+  text-align: center;
+  width: 60%;
+/*   border:1px solid red; */
+  height: 400px;
+  border-radius:10px;
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.section8 .swiper-slide:nth-child(2n) {
+  width: 40%;
+}
+
+.section8 .swiper-slide:nth-child(3n) {
+  width: 20%;
+}
+
+.section8 .swiper-pagination{
+/*   border:1px solid red; */
+}
+
+.section8 .swiper-slide:nth-child(1){
+  background:url(../image/ticket1.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(2){
+  background:url(../image/ticket2.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(3){
+  background:url(../image/ticket3.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(4){
+  background:url(../image/ticket4.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(5){
+  background:url(../image/ticket5.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(6){
+  background:url(../image/ticket6.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(7){
+  background:url(../image/ticket7.png);
+  background-size: cover;
+}
+.section8 .swiper-slide:nth-child(8){
+  background:url(../image/ticket8.png);
+  background-size: cover;
+}
+
+.section8 button{ /* 예매하기버튼 */
   border:1px solid #fff;
-  padding:8px 25px;
-  opacity:0;
-  transition:all 0.3s;
+  position: absolute;
+  bottom:20px;
+  width:120px;
+  height:40px;
+  line-height:40px;
+  font-size:17px;
+  background-color:transparent;
+  color:#fff;
+  cursor: pointer;
 }
 
-.special ul li:hover .htext{
-  opacity:1;
+.section8 button:hover{
+  background:rgba(255, 255, 255, 0.33);
+
 }
 
-.special ul li:hover .view{
-  opacity:1;
+.section8 .swiper-slide p{ /* 글자 */
+  margin-top:160px;
+  text-shadow:1px 1px 2px #333;
+  font-size: 20px;
+  color:#fff;
+  font-weight:bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FAQ SUBPAGE//////////////////////// */
 
-.list ul{
+.section9 ul {}
+
+.section9 ul li {
+  border-bottom: 1px solid #333;
+  line-height: 70px;
+  font-size: 15px;
+  font-weight: bold;
+  position: relative;
 
 }
 
-.list ul li{
-  border-bottom:1px solid #333;
-  line-height:70px;
-  font-size:15px;
-  font-weight:bold;
-  position:relative;
-  
+.section9 ul li:hover {
+  cursor: pointer;
 }
 
-.list ul li:hover{
-  cursor:pointer;
+.section9 ul li p {
+  display: inline;
+  color: #444;
 }
 
-.list ul li p{
-  display:inline;
-  color:#444;
+.section9 ul li:hover p {
+  border-bottom: 1px solid #333;
 }
 
-.list ul li:hover p{
-  border-bottom:1px solid #333;
+.section9 ul li span {
+  margin: 0 40px;
+  font-size: 30px;
+  color: #444;
 }
 
-.list ul li span{
-  margin:0 40px;
-  font-size:30px;
-  color:#444;
-}
-
-.list ul li .material-icons{
-  position:absolute;
-  top:23px;
-  right:40px;
+.section9 ul li .material-icons {
+  position: absolute;
+  top: 23px;
+  right: 40px;
 }
 
 
@@ -352,154 +957,152 @@ section{
 
 /*  이용문의 SUBPAGE//////////////////////// */
 
-fieldset{
-  border:1px solid #999;
-  height:850px;
+.section10 fieldset {
+  border: 1px solid #999;
+  height: 850px;
 
 }
 
-fieldset legend{
-  font-size:16px;
-  font-weight:bold;
-  background:rgb(255, 230, 211);
-  margin-left:10px;
-  padding:5px;
-  border-radius:5px;
-  color:#333;
+.section10 fieldset legend {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 7px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #333;
 }
 
-fieldset ul{
-  margin-left:30px;
+.section10 fieldset ul {
+  margin-left: 30px;
+}
+
+.section10 fieldset ul li {
+  padding: 20px;
+  border-bottom: 1px solid rgb(209, 209, 209);
+  position: relative;
+}
+
+.section10 fieldset ul li:last-child {
+  border-bottom: none;
 
 }
 
-fieldset ul li{
-  padding:20px;
-  border-bottom:1px solid rgb(209, 209, 209);
-  position:relative;
+.section10 fieldset input {
+  height: 25px;
 }
 
-fieldset ul li:last-child{
-  border-bottom:none;
-
+.section10 fieldset label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 40px;
+  color: #111;
 }
 
-fieldset input{
-  height:25px;
+.section10 input {
+  position: absolute;
+  top: 15px;
+  text-indent: 10px;
 }
 
-fieldset label{
-  font-size:16px;
-  font-weight:bold;
-  margin-left:40px;
-  color:#111;
+.section10 .inputs {
+  position: absolute;
+  left: 300px;
+  height: 30px;
+  width: 300px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-input{
-  position:absolute;
-  top:15px;
-  text-indent:10px;
+.section10 .input0 {
+  position: absolute;
+  left: 300px;
+  width: 300px;
+  top: 15px;
+  height: 30px;
+  text-indent: 10px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-.inputs{
-  position:absolute;
-  left:300px;
-  height:30px;
-  width:300px;
-  border:1px solid rgb(181, 181, 181)
-} 
-
-.input0{
-  position:absolute;
-  left:300px;
-  width:300px;
-  top:15px;
-  height:30px;
-  text-indent:10px;
-  border:1px solid rgb(181, 181, 181)
-} 
-
-.input1{
-  position:absolute;
-  left:300px;
-  width:100px;
-  text-indent:30px;
-  height:30px;
-  border:1px solid rgb(181, 181, 181);
+.section10 .input1 {
+  position: absolute;
+  left: 300px;
+  width: 100px;
+  text-indent: 30px;
+  height: 30px;
+  border: 1px solid rgb(181, 181, 181);
 }
 
-.input2{
-  position:absolute;
-  left:420px;
-  width:100px;
-  text-align:center;
-  height:30px;
-  border:1px solid rgb(181, 181, 181)
+.section10 .input2 {
+  position: absolute;
+  left: 420px;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-.input3{
-  position:absolute;
-  left:540px;
-  width:100px;
-  text-align:center;
-  height:30px;
-  border:1px solid rgb(181, 181, 181)
+.section10 .input3 {
+  position: absolute;
+  left: 540px;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-.submit{
-  width:150px;
-  height:40px;
-  font-size:17px;
-  font-weight:bold;
-  position:absolute;
-  top:1280px;
-  left:900px;
-  text-align:center;
-  text-indent:0;
-  background:salmon;
-  color:#fff;
-  border:none;
-  cursor:pointer;
+.section10 .submit {
+  width: 150px;
+  height: 40px;
+  font-size: 17px;
+  font-weight: bold;
+  position: absolute;
+  top: 1280px;
+  left: 900px;
+  text-align: center;
+  text-indent: 0;
+  background: salmon;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
-.submit:hover{
-  background:#fff;
-  color:salmon;
-  border:1px solid salmon;
+.section10 .submit:hover {
+  background: #fff;
+  color: salmon;
+  border: 1px solid salmon;
 }
 
-.auto{
-  position:absolute;
-  left:300px;
+.section10 .auto {
+  position: absolute;
+  left: 300px;
 }
 
-.inputauto{
-  position:absolute;
-  top:40px;
-  left:500px;
-  width:300px;
-  height:30px;
-  border:1px solid rgb(181, 181, 181)
+.section10 .inputauto {
+  position: absolute;
+  top: 40px;
+  left: 500px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-.long{
-  height:160px;
+.section10 .long {
+  height: 160px;
 }
 
-textarea{
-  position:absolute;
-  left:300px;
-  height:150px;
-  width:600px;
-  text-indent:10px;
-  padding-top:8px;
-  border:1px solid rgb(181, 181, 181)
+.section10 textarea {
+  position: absolute;
+  left: 300px;
+  height: 150px;
+  width: 600px;
+  text-indent: 10px;
+  padding-top: 8px;
+  border: 1px solid rgb(181, 181, 181)
 }
 
-fieldset .autotext{
-  font-size:12px;
-  position:absolute;
-  top:100px;
-  left:300px;
-  line-height:17px;
+.section10 fieldset .autotext {
+  font-size: 12px;
+  position: absolute;
+  top: 100px;
+  left: 300px;
+  line-height: 17px;
 }
